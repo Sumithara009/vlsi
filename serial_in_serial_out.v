@@ -1,23 +1,14 @@
 //20L152-SUMITHA R A
 
-module siso(
-    input si,clk,
-    output q
-    );
-wire s0,s1,s2;
-Dflipflop dff1(si,clk,s0);
-Dflipflop dff2(s0,clk,s1);
-Dflipflop dff3(s1,clk,s2);
-Dflipflop dff4(s2,clk,q);
-endmodule
-
-module Dflipflop(
-    input d,clk,
-    output reg q,qb
-    );
+module siso(d,clk,q);
+input d,clk;
+output reg [3:0]q;
 always@(posedge clk)
 begin
-q=d;
-qb=~d;
+q[3]<=d;
+q[2]<=q[3];
+q[1]<=q[2];
+q[0]<=q[1];
 end
 endmodule
+
