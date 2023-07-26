@@ -1,29 +1,29 @@
+//20lL152-SUMITHA R A
+
 module sisotest;
 
 	// Inputs
-	reg si;
+	reg d;
 	reg clk;
 
 	// Outputs
-	wire q;
+	wire [3:0] q;
 
 	// Instantiate the Unit Under Test (UUT)
 	siso uut (
-		.si(si), 
+		.d(d), 
 		.clk(clk), 
 		.q(q)
 	);
-   always #100 clk=~clk;
+always #100 clk=~clk;
 	initial begin
 		// Initialize Inputs
-		si = 0;
+		d = 0;
 		clk = 0;
-   
+
 		// Wait 100 ns for global reset to finish
-		#100;si=1'b1;
-		#100;si=1'b0;
-		#100;si=1'b1;
-		#100;si=1'b0;
+		#100;d=1;
+		
         
 		// Add stimulus here
 
