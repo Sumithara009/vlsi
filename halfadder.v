@@ -1,4 +1,4 @@
-Program:
+Program:    //20L152 SUMITHA R A
 
 module halfadd(
     input a,b,
