@@ -2,8 +2,11 @@
 
 module Dflipflop(
     input d,clk,
-    output q,qb
+    output reg q,qb
     );
-assign q=d;
-assign qb=~d;
+always@(posedge clk)
+begin
+q=d;
+qb=~d;
+end
 endmodule
