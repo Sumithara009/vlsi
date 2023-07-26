@@ -1,4 +1,4 @@
-Program:
+Program: //20L152-SUMITHA R A
 
 module binary4(
     input [3:0] a,b,
