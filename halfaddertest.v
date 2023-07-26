@@ -24,7 +24,7 @@ module halfaddtest;
 
 		// Wait 100 ns for global reset to finish
 		#100;a=1'b0;b=1'b0;
-    #100;a=1'b0;b=1'b1;
+                #100;a=1'b0;b=1'b1;
 		#100;a=1'b1;b=1'b0;
 		#100;a=1'b1;b=1'b1;
 		// Add stimulus here
