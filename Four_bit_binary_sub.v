@@ -1,3 +1,5 @@
+PROGRAM: //20L152-SUMITHA R A
+
 module binsub(a,b,s,cout);
 input [3:0]a;
 input [3:0]b;
@@ -23,6 +25,7 @@ or g5(co,x[2],x[1]);
 endmodule
 
 Test bench:
+
 module binsubtest;
 
 	// Inputs
@@ -47,7 +50,7 @@ module binsubtest;
 		b = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100 a=4'b0001;b=4'b0011;
+      #100 a=4'b0001;b=4'b0011;
       #100 a=4'b0101;b=4'b1011;
       #100 a=4'b1101;b=4'b0011;
       #100 a=4'b0011;b=4'b0011;
