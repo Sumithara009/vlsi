@@ -1,3 +1,5 @@
+Program:   //20L152-SUMITHA R A
+
 module fulladd(
     input a,b,cin,
     output s,co
@@ -11,6 +13,7 @@ or g5(co,x[2],x[1]);
 endmodule
 
 Test bench:
+
 module fulladdtest;
 
 	// Inputs
