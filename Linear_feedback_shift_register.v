@@ -1,3 +1,4 @@
+//20L152-SUMITHA R A
 module lfsr(
     input rst,clk,
     output reg [2:0] q
