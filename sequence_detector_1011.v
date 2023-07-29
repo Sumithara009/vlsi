@@ -37,9 +37,12 @@ begin
 				tick=1'b1;
 			  end
 			 else nex_st=C;
-		   end
+			end
+		default: begin
+		         nex_st=A;
+			      tick=1'b0;
+			      end	 
 	 endcase
 end
 endmodule
-		
-		
+
