@@ -1,5 +1,5 @@
 //20L152-SUMITHA R A
-module sequencedetectortest;
+module seq_det_1011_test;
 
 	// Inputs
 	reg clk;
@@ -10,13 +10,13 @@ module sequencedetectortest;
 	wire tick;
 
 	// Instantiate the Unit Under Test (UUT)
-	sequencedetector uut (
+	seq_det_1011 uut (
 		.clk(clk), 
 		.rst(rst), 
 		.sequence(sequence), 
 		.tick(tick)
 	);
-   always #100 clk=~clk;
+   always#100 clk=~clk;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
@@ -24,11 +24,11 @@ module sequencedetectortest;
 		sequence = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100 rst=1'b0;sequence=1'b0;
-		#100 rst=1'b0;sequence=1'b1;
-		#100 rst=1'b1;sequence=1'b0;
-		#100 rst=1'b1;sequence=1'b1;
-        
+		   #100 rst=1'b0;sequence=1'b0;
+			#100 rst=1'b0;sequence=1'b1;
+			#100 rst=1'b1;sequence=1'b0;
+			#100 rst=1'b1;sequence=1'b1;
+		
         
 		// Add stimulus here
 
