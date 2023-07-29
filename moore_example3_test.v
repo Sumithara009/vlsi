@@ -16,7 +16,7 @@ module moore_thi_eg_test;
 		.in(in), 
 		.out(out)
 	);
-
+   always #100 clk=~clk;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
@@ -30,11 +30,14 @@ module moore_thi_eg_test;
        #10;in = 1; 
        #20;in = 0; 
        #20;rst=0;in = 1; 
-       #20;in = 0; 
+       #20;in = 0;
+       #20;rst=1;in=1;		 
         
 		// Add stimulus here
 
 	end
       
 endmodule
+
+
 
